@@ -11,8 +11,14 @@ function calcAge(birthYear) {
       var millenial = true;
       const str = `oh, and you're a millenial, ${firstName} `;
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
     }
+    //console.log(str);
     console.log(millenial);
+    add(2, 3);
   }
   console.log(firstName);
   printAge();
