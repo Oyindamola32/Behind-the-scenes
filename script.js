@@ -4,13 +4,18 @@ function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
   function printAge() {
-    const output = `${firstName}, you are ${age}, born in ${birthYear}`;
+    let output = `${firstName}, you are ${age}, born in ${birthYear}`;
     console.log(output);
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
 
+      //Creating new variable with same name as outer scope's variable
       const firstName = 'Stephen';
+
+      //Reassigning outer scope's variable
+      output = 'New Output!';
+
       const str = `oh, and you're a millenial, ${firstName} `;
       console.log(str);
 
@@ -21,6 +26,7 @@ function calcAge(birthYear) {
     //console.log(str);
     console.log(millenial);
     //console.log(add(2, 3));
+    console.log(output);
   }
   console.log(firstName);
   printAge();
