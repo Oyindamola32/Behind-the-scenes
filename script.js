@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
@@ -9,6 +9,8 @@ function calcAge(birthYear) {
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
+
+      const firstName = 'Stephen';
       const str = `oh, and you're a millenial, ${firstName} `;
       console.log(str);
 
@@ -18,7 +20,7 @@ function calcAge(birthYear) {
     }
     //console.log(str);
     console.log(millenial);
-    console.log(add(2, 3));
+    //console.log(add(2, 3));
   }
   console.log(firstName);
   printAge();
