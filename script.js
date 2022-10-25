@@ -37,10 +37,24 @@ const firstName = 'Jonas';
 calcAge(1991);
 */
 
+//variables
 console.log(me);
-console.log(job);
-console.log(year);
+//console.log(job);
+//console.log(year);
 
 var me = 'Oyindamola';
 let job = 'student';
 const year = 1999;
+
+//functions
+console.log(addDecl(2, 3));
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
