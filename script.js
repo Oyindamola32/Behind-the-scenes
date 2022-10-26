@@ -125,13 +125,33 @@ f();
 
 ///////////////////////////////////////
 // Regular Functions vs. Arrow Functions
+var firstName = 'matilda';
+
 const jonas = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
-    console.log(this);
+    //console.log(this);
     console.log(2037 - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
-  greet: () => console.log(`Hey ${this.firstName}`),
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
 };
+
+//you should use this one instaed of arrow function it will output hey jonas
+// greet: function () {
+//   console.log(this);
+//   console.log(`Hey ${this.firstName}`);
+// },
+// };
+
 jonas.greet();
+jonas.calcAge();
