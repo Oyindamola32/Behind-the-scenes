@@ -84,13 +84,13 @@ console.log(z === window.z);
 
 const calcAge = function (birthYear) {
   console.log(2037 - birthYear);
-  console.log(this);
+  //console.log(this);
 };
 calcAge(1991);
 
 const calcAgeArrow = birthYear => {
   console.log(2037 - birthYear);
-  console.log(this);
+  //console.log(this);
 };
 calcAgeArrow(1991);
 
@@ -102,3 +102,10 @@ const jonas = {
   },
 };
 jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
