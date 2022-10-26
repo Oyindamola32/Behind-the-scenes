@@ -1,5 +1,8 @@
-/*'use strict';
+'use strict';
 
+///////////////////////////////////////
+// Scoping in Practice
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
@@ -23,20 +26,24 @@ function calcAge(birthYear) {
         return a + b;
       }
     }
-    //console.log(str);
+    // console.log(str);
     console.log(millenial);
     //console.log(add(2, 3));
     console.log(output);
   }
-  console.log(firstName);
   printAge();
+
   return age;
 }
 
 const firstName = 'Jonas';
 calcAge(1991);
+//console.log(age)
+//printAge()
 
 
+///////////////////////////////////////
+// Hoisting and TDZ in Practice
 //variables
 console.log(me);
 //console.log(job);
@@ -78,8 +85,10 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
-*/
 
+
+///////////////////////////////////////
+// The this Keyword in Practice
 //console.log(this);
 
 const calcAge = function (birthYear) {
@@ -112,3 +121,17 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f();
+*/
+
+///////////////////////////////////////
+// Regular Functions vs. Arrow Functions
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+  greet: () => console.log(`Hey ${this.firstName}`),
+};
+jonas.greet();
