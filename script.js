@@ -207,3 +207,18 @@ let lastName = 'Williams';
 let oldLastName = lastName;
 lastName = 'Davis';
 console.log(lastName, oldLastName);
+
+//reference types
+const jessica = {
+  firstName: 'jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before Marriage:', jessica);
+console.log('After Marriage:', marriedJessica);
+// marriedJessica = {};
+
+// Copying objects
