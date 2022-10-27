@@ -222,3 +222,12 @@ console.log('After Marriage:', marriedJessica);
 // marriedJessica = {};
 
 // Copying objects
+const jessica2 = {
+  firstName: 'jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+console.log('Before Marriage:', jessica2);
+console.log('After Marriage:', jessicaCopy);
